@@ -11,13 +11,14 @@ Downloads for NOTORYX Forge, a desktop app for programming and flashing Meshtast
 
 ## Latest
 
-No release yet. The first test build (test.1, Meshtastic programming) is being built now.
+**[0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1)** (2026-11-20, test build): read, edit and write Meshtastic radios over USB or Wi-Fi with review and read-back, snapshots, offline firmware (Meshtastic 2.7.26 Beta, MeshCore 1.18.0), and Daylight, Red night and Night-vision safe looks. Next: ESP32 flashing and team kits (test.2), MeshCore programming (test.3).
 
 ## Which file
 
 | File | For |
 |---|---|
 | `NOTORYX-Forge_<version>_universal.dmg` | Mac (Intel and Apple Silicon). Unsigned: right-click the app and choose Open the first time |
+| `NOTORYX-Forge_<version>_universal.app.zip` | The same Mac app without the disk image |
 | `NOTORYX-Forge_<version>_x64-setup.exe` | Windows 10 and 11. SmartScreen may warn because it isn't signed: choose More info, then Run anyway |
 | `NOTORYX-Forge_<version>_amd64.deb` / `.AppImage` | Linux on a PC |
 | `NOTORYX-Forge_<version>_arm64.deb` | Raspberry Pi 4 or 5 with 64-bit Raspberry Pi OS (Bookworm) |
