@@ -12,9 +12,9 @@ Downloads for NOTORYX Forge, a desktop app for programming and flashing Meshtast
 
 ## Latest
 
-**[0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2)** (2026-11-21, test build): ESP32 flashing from the app (Update or Full install), team kits, and a listen-first check so MeshCore radios and boards in update mode are never sent Meshtastic data. The version now shows in the header. Next: MeshCore programming (test.3).
+**[0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3)** (2026-11-21, test build): MeshCore programming (companion, repeater and room-server settings, channels and keys), MeshCore team kits, and experimental Bluetooth.
 
-Earlier: [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1) (2026-11-20).
+Earlier: [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
 
 ## Which file
 
@@ -42,8 +42,9 @@ Early test builds. What has been checked on real hardware:
 
 - **Meshtastic T1000-E (firmware 2.7.26) over USB:** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed. A team kit write (7 of 7 changes read back) and a full restore afterwards.
 - **Heltec V3 (ESP32-S3) over USB:** Full install and Update of Meshtastic 2.7.26 from the app, and firmware for a bigger board refused with nothing written.
+- **Heltec V3 with MeshCore companion 1.18.0 over USB:** reading every setting and channel, writing and reading back (also after the restart), a MeshCore team kit, and restoring the original settings exactly.
 
-Not yet checked: Wi-Fi/TCP radios, UF2 flashing from the app, MeshCore ESP32 installs, other ESP32 chips, and every platform's installer on real machines.
+Not yet checked: Bluetooth pairing (experimental), MeshCore repeater and room-server firmware on a radio, Wi-Fi/TCP radios, UF2 flashing from the app, other ESP32 chips, and every platform's installer on real machines.
 
 ## Problems or ideas
 
