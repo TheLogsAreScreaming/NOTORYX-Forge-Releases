@@ -7,11 +7,14 @@ Downloads for NOTORYX Forge, a desktop app for programming and flashing Meshtast
 - **Every change checked twice:** Forge reads every setting from the radio and saves a snapshot. Changed fields are highlighted with their old values, and nothing is written until you've reviewed a list of exactly what will change. Afterwards Forge reads the radio back and tells you whether it kept the new settings.
 - **Nothing gets lost:** hidden values such as the Wi-Fi password and the radio's private key go back untouched, and settings newer than Forge knows about survive the round trip.
 - **Firmware ready offline:** installers carry the official Meshtastic Beta and MeshCore release firmware for every supported board, with a checksum for every file. The same firmware pack is also published on its own.
-- **Several radios at once:** each USB radio gets its own connection. Team kits (Tech1 to Tech5 with shared channels and keys) are coming.
+- **Several radios at once:** each USB radio gets its own connection, and team kits set up Tech1 to Tech5 with shared channels and new keys in one go.
+- **ESP32 flashing built in:** Update (keeps settings) or Full install over USB, with checksum, chip and flash-size checks before anything is written.
 
 ## Latest
 
-**[0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1)** (2026-11-20, test build): read, edit and write Meshtastic radios over USB or Wi-Fi with review and read-back, snapshots, offline firmware (Meshtastic 2.7.26 Beta, MeshCore 1.18.0), and Daylight, Red night and Night-vision safe looks. Next: ESP32 flashing and team kits (test.2), MeshCore programming (test.3).
+**[0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2)** (2026-11-21, test build): ESP32 flashing from the app (Update or Full install), team kits, and a listen-first check so MeshCore radios and boards in update mode are never sent Meshtastic data. The version now shows in the header. Next: MeshCore programming (test.3).
+
+Earlier: [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1) (2026-11-20).
 
 ## Which file
 
@@ -37,9 +40,10 @@ Firmware files are unchanged copies of the official releases. Meshtastic firmwar
 
 Early test builds. What has been checked on real hardware:
 
-- **Meshtastic T1000-E (firmware 2.7.26) over USB:** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed.
+- **Meshtastic T1000-E (firmware 2.7.26) over USB:** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed. A team kit write (7 of 7 changes read back) and a full restore afterwards.
+- **Heltec V3 (ESP32-S3) over USB:** Full install and Update of Meshtastic 2.7.26 from the app, and firmware for a bigger board refused with nothing written.
 
-Not yet checked: Wi-Fi/TCP radios, flashing from the app, and every platform's installer on real machines.
+Not yet checked: Wi-Fi/TCP radios, UF2 flashing from the app, MeshCore ESP32 installs, other ESP32 chips, and every platform's installer on real machines.
 
 ## Problems or ideas
 
