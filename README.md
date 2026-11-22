@@ -1,14 +1,31 @@
-<img src="icon.png" width="128" alt="NOTORYX Forge icon">
+<p align="center"><img src="images/header.png" alt="NOTORYX Forge" width="900"></p>
 
 # NOTORYX Forge releases
 
 Downloads for NOTORYX Forge, a desktop app for programming and flashing Meshtastic and MeshCore radios with no internet, no account and no cloud.
 
+<p align="center"><img src="images/screenshots/02-program.png" alt="Editing a Meshtastic radio: changed fields show their old values" width="900"></p>
+
 - **Every change checked twice:** Forge reads every setting from the radio and saves a snapshot. Changed fields are highlighted with their old values, and nothing is written until you've reviewed a list of exactly what will change. Afterwards Forge reads the radio back and tells you whether it kept the new settings.
 - **Nothing gets lost:** hidden values such as the Wi-Fi password and the radio's private key go back untouched, and settings newer than Forge knows about survive the round trip.
+- **Meshtastic and MeshCore:** every Meshtastic setting and channel; MeshCore companion, repeater and room-server settings, channels and keys.
+- **Team kits:** set up Tech1, Tech2 and so on with shared channels, new keys and the same radio settings in one go, each radio written and checked in turn. Each radio keeps its own device keys.
 - **Firmware ready offline:** installers carry the official Meshtastic Beta and MeshCore release firmware for every supported board, with a checksum for every file. The same firmware pack is also published on its own.
-- **Several radios at once:** each USB radio gets its own connection, and team kits set up Tech1 to Tech5 with shared channels and new keys in one go.
 - **ESP32 flashing built in:** Update (keeps settings) or Full install over USB, with checksum, chip and flash-size checks before anything is written.
+- **Looks for any light:** BLACKOUT (default), Forge, Daylight, Red night and Night-vision safe, with a dimmer for the night looks.
+
+## Screenshots
+
+From the built-in demo radio with example data.
+
+| | |
+|---|---|
+| <img src="images/screenshots/01-radios.png" alt="Radios: USB, Wi-Fi and Bluetooth"><br>Find radios on USB, Wi-Fi or Bluetooth | <img src="images/screenshots/03-review.png" alt="Review before writing"><br>Review exactly what will change |
+| <img src="images/screenshots/04-verified.png" alt="Read back after the write"><br>Read back after every write | <img src="images/screenshots/05-team-kit.png" alt="Team kit"><br>Team kit for several radios |
+| <img src="images/screenshots/06-esp32-flash.png" alt="ESP32 flashing"><br>ESP32 flashing with chip and flash checks | <img src="images/screenshots/07-meshcore.png" alt="MeshCore repeater settings"><br>MeshCore repeater settings |
+| <img src="images/screenshots/08-snapshots.png" alt="Snapshots"><br>Snapshots kept on this computer | |
+
+The BLACKOUT look and icon shown here arrive in the next build; 0.1.0 test.3 still has the earlier look and icon.
 
 ## Latest
 
@@ -38,11 +55,11 @@ Firmware files are unchanged copies of the official releases. Meshtastic firmwar
 
 ## Status
 
-Early test builds. What has been checked on real hardware:
+Early test builds. What has been checked on real hardware over USB:
 
-- **Meshtastic T1000-E (firmware 2.7.26) over USB:** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed. A team kit write (7 of 7 changes read back) and a full restore afterwards.
-- **Heltec V3 (ESP32-S3) over USB:** Full install and Update of Meshtastic 2.7.26 from the app, and firmware for a bigger board refused with nothing written.
-- **Heltec V3 with MeshCore companion 1.18.0 over USB:** reading every setting and channel, writing and reading back (also after the restart), a MeshCore team kit, and restoring the original settings exactly.
+- **Meshtastic (firmware 2.7.26):** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed. A team kit write (7 of 7 changes read back) and a full restore afterwards.
+- **Heltec V3 (ESP32-S3):** Full install and Update of Meshtastic 2.7.26 from the app, and firmware for a bigger board refused with nothing written.
+- **Heltec V3 with MeshCore companion 1.18.0:** reading every setting and channel, writing and reading back (also after the restart), a MeshCore team kit, and restoring the original settings exactly.
 
 Not yet checked: Bluetooth pairing (experimental), MeshCore repeater and room-server firmware on a radio, Wi-Fi/TCP radios, UF2 flashing from the app, other ESP32 chips, and every platform's installer on real machines.
 
