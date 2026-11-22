@@ -25,13 +25,11 @@ From the built-in demo radio with example data.
 | <img src="images/screenshots/06-esp32-flash.png" alt="ESP32 flashing"><br>ESP32 flashing with chip and flash checks | <img src="images/screenshots/07-meshcore.png" alt="MeshCore repeater settings"><br>MeshCore repeater settings |
 | <img src="images/screenshots/08-snapshots.png" alt="Snapshots"><br>Snapshots kept on this computer | |
 
-The BLACKOUT look and icon shown here arrive in the next build; 0.1.0 test.3 still has the earlier look and icon.
-
 ## Latest
 
-**[0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3)** (2026-11-21, test build): MeshCore programming (companion, repeater and room-server settings, channels and keys), MeshCore team kits, and experimental Bluetooth.
+**[0.1.0 test.4](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.4)** (2026-11-22, test build): the new BLACKOUT look, with a new icon and BLACKOUT as the default look (all four old looks kept).
 
-Earlier: [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
+Earlier: [0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3) (MeshCore programming, MeshCore team kits, experimental Bluetooth), [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
 
 ## Which file
 
