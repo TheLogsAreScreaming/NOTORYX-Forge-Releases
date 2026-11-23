@@ -25,13 +25,11 @@ From the built-in demo radio with example data.
 | <img src="images/screenshots/06-esp32-flash.png" alt="ESP32 flashing"><br>ESP32 flashing with chip and flash checks | <img src="images/screenshots/07-meshcore.png" alt="MeshCore repeater settings"><br>MeshCore repeater settings |
 | <img src="images/screenshots/08-snapshots.png" alt="Snapshots"><br>Snapshots kept on this computer | |
 
-The BLACKOUT look and icon shown here arrive in the next build; 0.1.0 test.3 still has the earlier look and icon.
-
 ## Latest
 
-**[0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3)** (2026-11-21, test build): MeshCore programming (companion, repeater and room-server settings, channels and keys), MeshCore team kits, and experimental Bluetooth.
+**[0.1.0 test.5](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.5)** (2026-11-23, test build): Bluetooth pairing, reading and writing now work on Meshtastic radios, and Linux no longer lists built-in serial ports.
 
-Earlier: [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
+Earlier: [0.1.0 test.4](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.4) (BLACKOUT look and icon), [0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3) (MeshCore programming, experimental Bluetooth), [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
 
 ## Which file
 
@@ -55,13 +53,16 @@ Firmware files are unchanged copies of the official releases. Meshtastic firmwar
 
 ## Status
 
-Early test builds. What has been checked on real hardware over USB:
+Early test builds. What has been checked on real hardware:
 
 - **Meshtastic (firmware 2.7.26):** reading every setting, writing a change in one transaction, the radio restarting, and the read-back matching with nothing else changed. A team kit write (7 of 7 changes read back) and a full restore afterwards.
 - **Heltec V3 (ESP32-S3):** Full install and Update of Meshtastic 2.7.26 from the app, and firmware for a bigger board refused with nothing written.
 - **Heltec V3 with MeshCore companion 1.18.0:** reading every setting and channel, writing and reading back (also after the restart), a MeshCore team kit, and restoring the original settings exactly.
+- **Meshtastic over Wi-Fi (TCP):** reading, writing a change and restoring it, read back after each restart.
+- **Meshtastic over Bluetooth on a Mac:** pairing from scratch with the PIN, reading, writing a change and restoring it, read back after each restart.
+- **Installers:** each one installed and opened on clean GitHub-hosted machines: Windows Server 2022 and 2025, macOS 15, Ubuntu 22.04 and 24.04, Debian 12, the AppImage, and Debian 12 and 13 on arm64 (the bases of Raspberry Pi OS).
 
-Not yet checked: Bluetooth pairing (experimental), MeshCore repeater and room-server firmware on a radio, Wi-Fi/TCP radios, UF2 flashing from the app, other ESP32 chips, and every platform's installer on real machines.
+Not yet checked: MeshCore over Bluetooth, MeshCore repeater and room-server firmware on a radio, UF2 flashing from the app, other ESP32 chips, and the installers on real desktop PCs and a real Raspberry Pi.
 
 ## Problems or ideas
 
