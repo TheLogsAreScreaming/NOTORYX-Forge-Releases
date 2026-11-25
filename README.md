@@ -12,6 +12,8 @@ Downloads for NOTORYX Forge, a desktop app for programming and flashing Meshtast
 - **Team kits:** set up Tech1, Tech2 and so on with shared channels, new keys and the same radio settings in one go, each radio written and checked in turn. Each radio keeps its own device keys.
 - **Firmware ready offline:** installers carry the official Meshtastic Beta and MeshCore release firmware for every supported board, with a checksum for every file. The same firmware pack is also published on its own.
 - **ESP32 flashing built in:** Update (keeps settings) or Full install over USB, with checksum, chip and flash-size checks before anything is written.
+- **Firmware updates in a click:** when Meshtastic or MeshCore publish new firmware, a new Forge pack is built and Forge offers it. Each radio then updates with one click and keeps its settings, or use Update all for every plugged-in radio.
+- **Restore and copy:** put a radio back to any earlier snapshot, or copy one radio's settings to another, which keeps its own name and keys.
 - **Looks for any light:** BLACKOUT (default), Forge, Daylight, Red night and Night-vision safe, with a dimmer for the night looks.
 
 ## Screenshots
@@ -27,9 +29,9 @@ From the built-in demo radio with example data.
 
 ## Latest
 
-**[0.1.0 test.6](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.6)** (2026-11-23, test build): Bluetooth pairing, reading and writing now work on MeshCore radios too, and the Firmware page warns before putting MeshCore 1.18+ on nRF52 solar repeaters.
+**[0.1.0 test.7](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.7)** (2026-11-25, test build): one-click firmware updates for every supported board (new firmware offered automatically), restore from snapshots, and copying a radio's settings to another.
 
-Earlier: [0.1.0 test.5](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.5) (Meshtastic Bluetooth), [0.1.0 test.4](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.4) (BLACKOUT look and icon), [0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3) (MeshCore programming, experimental Bluetooth), [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
+Earlier: [0.1.0 test.6](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.6) (MeshCore Bluetooth), [0.1.0 test.5](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.5) (Meshtastic Bluetooth), [0.1.0 test.4](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.4) (BLACKOUT look and icon), [0.1.0 test.3](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.3) (MeshCore programming, experimental Bluetooth), [0.1.0 test.2](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.2) (ESP32 flashing, team kits), [0.1.0 test.1](https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/tag/v0.1.0-test.1).
 
 ## Which file
 
@@ -48,6 +50,9 @@ Installers are large (about 600 MB to 1 GB) because the firmware for every board
 On Linux and the Pi, add yourself to the `dialout` group once so Forge can open USB radios: `sudo usermod -aG dialout $USER`, then log out and back in.
 
 ## Firmware
+
+Firmware packs are published here as separate releases named "Firmware pack: …", built automatically each time Meshtastic (Beta) or MeshCore publish new firmware. `firmware/latest.json` describes the newest one; Forge reads it to offer updates.
+
 
 Firmware files are unchanged copies of the official releases. Meshtastic firmware is GPL-3.0 and MeshCore firmware is MIT; each pack's `LICENSES/SOURCE.md` links the exact source code for those versions. NOTORYX Forge isn't made by or affiliated with Meshtastic or MeshCore. Meshtastic® is a registered trademark of Meshtastic LLC.
 
