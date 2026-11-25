@@ -1,0 +1,20 @@
+{
+ "format": 1,
+ "pack_id": "meshtastic-2.7.26.54e0d8d-meshcore-1.18.0",
+ "created": "2026-11-25T18:01:48+00:00",
+ "systems": [
+  {
+   "system": "meshtastic",
+   "version": "2.7.26.54e0d8d",
+   "channel": "beta"
+  },
+  {
+   "system": "meshcore",
+   "version": "1.18.0",
+   "channel": "release"
+  }
+ ],
+ "url": "https://github.com/TheLogsAreScreaming/NOTORYX-Forge-Releases/releases/download/firmware-meshtastic-2.7.26.54e0d8d-meshcore-1.18.0/NOTORYX-Forge-firmware-pack.zip",
+ "size": 592209866,
+ "sha256": "f5aaa39261bc6ea091700b55f4fdf9a2f8724b8a9cc1086596a898bad0493fd5"
+}
